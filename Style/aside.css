@@ -1,0 +1,28 @@
+aside{
+    max-width: 400px;
+    height: 728px;
+    padding: 2rem;
+
+    & img{
+        width: 46px;
+        height: 48px;
+        margin-bottom: 1rem;
+    }
+
+    & h1{
+        font: var(--title-logo);
+        color: var(--pink);
+    }
+
+    & p {
+        font: var(--text-semi);
+        margin-top: 4px;
+    }
+
+    background-image: url(../Assets/Background.png);
+    background-size: cover;
+    
+    
+}
+
+
