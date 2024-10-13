@@ -1,0 +1,68 @@
+footer {
+  margin-top: 3rem;
+  padding: 2.4rem auto 6.12rem;
+
+  position: relative;
+
+  & button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.81rem 1.25rem;
+    margin-top: 3rem;
+
+    position: absolute;
+    right: 0;
+
+    color: var(--text-body);
+    font-weight: 600;
+
+    
+    background-color: var(--brand-dark);
+
+    border-radius: 0.5rem;
+    border: none;
+
+    & img{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 4px;
+
+    & [type="checkbox"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & .checkbox_image {
+        flex: 0 0 1.5rem;
+        height: 1.5rem;
+        
+        background-image: url(../Assets/icons/input-checkbox-unchecked.svg);
+        background-repeat: no-repeat;        
+    }
+
+    &:has(:checked) .checkbox_image{
+        background-image: url(../Assets/icons/input-checkbox-checked.svg);
+        background-repeat: no-repeat;
+    }
+
+    & label {
+        font: var(--text-xs-semi);
+        
+        & strong {
+            color: var(--brand-light);
+        }
+    }
+
+    
+}
+
