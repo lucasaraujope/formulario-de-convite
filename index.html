@@ -20,5 +20,79 @@
         <h1>Festivite</h1>
         <p>Crie um convite digital para o seu evento</p>
     </aside>
+    <main>
+        <h2>Crie seu convite</h2>
+        <fieldset class="about-event">
+            
+            <div class="title-about">
+                <img src="/Assets/icons/icon-calendar-legend.svg" alt="">
+                <h3>Sobre o evento</h3>
+            </div>
+            <div class="inputs-wrappers">
+                <label for="event-name"><h4>Título</h4></label>
+                <input type="text" name="event-name" id="event-name" placeholder="Nome do evento">
+                
+                <div class="date-info">
+                    <div>
+                        <label for="start-datatime flex-1"><h4>Inicío</h4></label>
+                        <input type="datetime" name="start-datatime" id="start-datatime" placeholder="DD/MM/AAAA, --:--">
+                    </div>
+                    
+                    <div>
+                        <label for="end-datatime flex-2"><h4>Fim</h4></label>
+                        <input type="datetime" name="end-datatime" id="end-datatime" placeholder="DD/MM/AAAA, --:--">
+                    </div>
+                </div>
+                
+                <div class="info-and-links">
+                    <div class="type-local">
+                        <h4>Tipo</h4> 
+                        <div class="local-info"> 
+                            <div class="local-type">  
+                                <div class="div1">
+                                    <img src="/Assets/icons/building-2.png" alt="">
+                                    <label for="presential">Presencial</label>
+                                    <input type="radio" name="local" id="presential" >
+                                </div>
+                                <div class="div2">
+                                    <img src="/Assets/icons/icon-online-unselected.svg" alt="">
+                                    <label for="online">Online</label>
+                                    <input type="radio" name="local" id="online" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link">
+                        <label for="local"><h4>Local</h4></label>
+                        <input type="text" name="local" id="local" placeholder="Link ou endereço">
+                    </div>
+                </div>
+
+                <h4>Descrição</h4>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Escreva sobre os detalhes do evento"></textarea>
+            </div>
+        </fieldset>
+        <fieldset id="costumization">
+            <div class="title-and-icon">
+                <img src="Assets/icons/icon-brush-legend.svg" alt="">
+                <h3>Personalização</h3>
+            </div>
+            <h4>Cor Principal</h4>
+            <div class="main-color">
+
+                <span class="color1"></span>
+                <span class="color2"></span>
+                <span class="color3"></span>
+                <span class="color4"></span>
+                <span class="color5"></span>
+                <span class="color6"></span>
+                <span class="color7"></span>
+                <span class="color8"></span>
+                <span class="color9"></span>
+                <span class="color10"></span>
+                <span class="color11"></span>
+            </div>
+        </fieldset>
+    </main>
   </body>
 </html>

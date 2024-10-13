@@ -1,0 +1,139 @@
+main {
+  width: 35rem;
+  margin: 2.5rem 8.12rem 5rem 8.12rem;
+
+  & h2 {
+    margin-bottom: 2.5rem;
+    font: var(--heading-md);
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+.about-event {
+  & .title-about {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    & img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .inputs-wrappers {
+    & label {
+      font: var(--text-sm-reg);
+    }
+
+    & #event-name {
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.5rem;
+      background-color: var(--input-base);
+      border: 1px solid var(--input-stroke);
+
+      padding: 0.75rem 1rem;
+      &::placeholder {
+        color: var(--input-placeholder);
+      }
+    }
+
+    & .date-info {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 1em 0;
+      gap: 1rem;
+
+      justify-content: space-between;
+    }
+
+    & .info-and-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      & .type-local {
+        width: 100%;
+
+        & .local-type {
+          display: flex;
+          position: relative;
+          padding: 4px;
+          gap: 1rem;
+
+          border: 1px solid var(--input-stroke);
+          border-radius: 6px;
+
+          & .div1 {
+            padding-inline: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--shape-hover);
+            border-radius: 4px;
+            width: 50%;
+
+            img {
+              width: 1rem;
+              height: 1rem;
+            }
+
+            & #presential {
+              position: absolute;
+              left: 0rem;
+              top: .4rem;
+              opacity: 0;
+              width: 50%;
+            }
+
+            & input {
+              width: 100%;
+            }
+          }
+
+          & .div2 {
+            padding: 0.6rem 18px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            img {
+              width: 1rem;
+              height: 1rem;
+            }
+
+            & #online {
+              position: absolute;
+              right: 0;
+              width: 50%;
+              opacity: 0;
+            }
+            & input {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &  textarea {
+      width: 100%;
+      height: 8.5rem;
+      background-color: var(--input-base);
+      border: 1px solid var(--input-stroke);
+      border-radius: 4px;
+      padding: 1rem;
+      font: var(--text-reg);
+    }
+  }
+}
