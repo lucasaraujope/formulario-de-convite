@@ -13,17 +13,7 @@ fieldset {
 }
 
 .about-event {
-  & .title-about {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
 
-    & img {
-      width: 24px;
-      height: 24px;
-    }
-  }
 
   .inputs-wrappers {
     & label {
