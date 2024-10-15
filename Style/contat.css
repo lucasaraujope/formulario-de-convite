@@ -1,4 +1,16 @@
 .dados {
+
+    border-bottom: 1px solid var(--input-stroke);
+    & input {
+        &:invalid{
+            border: 0.125rem solid var(--danger);
+        }
+
+        &:not(:focus):valid + .message-error {
+            display: none;
+        }
+    } 
+
      & .message-error{
         display: flex;
         align-items: center;
@@ -19,7 +31,7 @@
         justify-content: space-between;
         gap: 1rem;
 
-        margin-top: 1rem;
+        margin: 1rem 0 3rem 0;
 
         & .contact_email{
             width: 50%;

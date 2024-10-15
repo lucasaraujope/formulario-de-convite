@@ -1,47 +1,39 @@
 form {
-  width: 35rem;
-  margin: 2.5rem 8.12rem 5rem 8.12rem;
-
-  & h2 {
-    margin-bottom: 2.5rem;
-    font: var(--heading-md);
-  }
-}
-
-fieldset {
-  border: none;
-}
-
-.about-event {
-
-
-  .inputs-wrappers {
-    & label {
-      font: var(--text-sm-reg);
-    }
-
-    & #event-name {
-      width: 100%;
-      height: 3rem;
-      border-radius: 0.5rem;
-      background-color: var(--input-base);
-      border: 1px solid var(--input-stroke);
-
-      padding: 0.75rem 1rem;
-      &::placeholder {
-        color: var(--input-placeholder);
+  .about-event {
+    & .inputs-wrappers {
+      & label {
+        font: var(--text-sm-reg);
       }
-    }
 
-    & .date-info {
-      width: 100%;
+      & #event-name {
+        width: 100%;
+        height: 3rem;
+        padding: 0.75rem 1rem;
 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin: 1em 0;
-      gap: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--input-stroke);
 
-      justify-content: space-between;
+        background-color: var(--input-base);
+
+        &::placeholder {
+          color: var(--input-placeholder);
+        }
+      }
+
+      & #event-name:hover {
+        border: 1px solid var(--brand-light);
+        outline: none;
+      }
+
+      & .date-info {
+        width: 100%;
+        margin: 1em 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: 1rem;
+      }
     }
 
     & .info-and-links {
@@ -49,6 +41,7 @@ fieldset {
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
       justify-content: space-between;
+
       margin-bottom: 1rem;
 
       & .type-local {
@@ -56,6 +49,7 @@ fieldset {
 
         & .local-type {
           display: flex;
+          justify-content: space-between;
           position: relative;
           padding: 4px;
           gap: 1rem;
@@ -63,15 +57,56 @@ fieldset {
           border: 1px solid var(--input-stroke);
           border-radius: 6px;
 
+          &:has(:checked) .image_wrapper {
+            border: 2px solid var(--brand-light);
+          }
+          
           & .div1 {
             padding-inline: 18px;
+            width: 50%;
+
+          
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            background-color: var(--shape-hover);
+            position: relative;
             border-radius: 4px;
-            width: 50%;
+            
+
+            & [type="radio"] {
+              all: unset;
+              position: absolute;
+            }
+            
+            &:not(:checked) {              
+              background-color: var(--shape-background);
+              background-image: url(../Assets/icons/building-22.svg);
+              background-repeat: no-repeat;
+              background-position: 18%;
+              
+              & img {
+                opacity: 0;
+              }
+
+            }
+
+            &:has(:checked) {
+              background-color: var(--shape-hover);
+              background-image: url(../Assets/icons/building-2.svg);
+              background-repeat: no-repeat;
+              background-position: 18%;
+              
+              & img {
+                opacity: 0;
+              }
+
+
+              & label {
+                font: var(--text-sm-semi);
+              }
+            }
+
 
             img {
               width: 1rem;
@@ -80,22 +115,43 @@ fieldset {
 
             & #presential {
               position: absolute;
-              left: 0rem;
-              top: .4rem;
-              opacity: 0;
-              width: 50%;
-            }
-
-            & input {
-              width: 100%;
+              opacity: 1;
             }
           }
 
           & .div2 {
+            position: relative;
             padding: 0.6rem 18px;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            width: 50%;
+            border-radius: 4px;
+
+            & [type="radio"] {
+              all: unset;
+              position: absolute;
+            }
+
+            &:not(:checked) {
+              background-color: var(--shape-background);
+            }
+
+            &:has(:checked) {
+              background-color: var(--shape-hover);
+              background-image: url(../Assets/icons/blue_cam.svg);
+              background-repeat: no-repeat;
+              background-position: 18%;
+              
+              & img {
+                opacity: 0;
+              }
+
+
+              & label {
+                font: var(--text-sm-semi);
+              }
+            }
 
             img {
               width: 1rem;
@@ -104,26 +160,36 @@ fieldset {
 
             & #online {
               position: absolute;
-              right: 0;
-              width: 50%;
-              opacity: 0;
-            }
-            & input {
-              width: 100%;
+              opacity: 1;
             }
           }
         }
       }
     }
 
-    &  textarea {
+    & textarea {
       width: 100%;
       height: 8.5rem;
+      padding: 1rem;
+
       background-color: var(--input-base);
+
       border: 1px solid var(--input-stroke);
       border-radius: 4px;
-      padding: 1rem;
+
       font: var(--text-reg);
+      color: var(--text-body);
+
+      
+    }
+
+    & #description:invalid{
+      border: 0.125rem solid var(--danger);
+    }
+
+    & #description:hover {
+      border: 1px solid var(--brand-light);
+      outline: none;
     }
   }
 }

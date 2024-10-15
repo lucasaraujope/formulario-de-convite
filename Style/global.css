@@ -65,6 +65,20 @@ body {
 
 }
 
+form {
+  width: 35rem;
+  margin:  8.12rem;
+
+  & h2 {
+    margin-bottom: 2.5rem;
+    font: var(--heading-md);
+  }
+}
+
+fieldset {
+  border: none;
+}
+
 img {
   width: 100%;
 }
@@ -75,17 +89,24 @@ h3 {
 
 
 input {
+  padding: 1.5rem 1rem;
   height: 2rem;
-  border-radius: 0.5rem;
+  width: 100%;
+
   background-color: var(--input-base);
+  color:var(--text-body);
+
+  border-radius: 0.5rem;
   border: 1px solid var(--input-stroke);
 
-  padding: 1.5rem 1rem;
-  width: 100%;
+  
   &::placeholder {
     color: var(--input-placeholder);
   }
+
 }
+
+
 
 h4{
     font: var(--text-reg);
@@ -104,3 +125,14 @@ h4{
     height: 24px;
   }
 }
+
+input:focus, input:hover  {
+  border: 1px solid var(--brand-light);
+  outline: none;
+}
+
+textarea:focus, textarea:hover{
+  border: 1px solid var(--brand-light);
+  outline: none;
+}
+
